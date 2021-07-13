@@ -1,7 +1,7 @@
 from django.db.models import Index, Q
-from django.utils import six
 from django.utils.encoding import force_bytes
 import hashlib
+import six
 import warnings
 
 
