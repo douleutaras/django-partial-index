@@ -152,7 +152,8 @@ class PartialIndex(Index):
             'Index too long for multiple database support. Is self.suffix '
             'longer than 3 characters?'
         )
-        self.check_name()
+        if self.name[0] == '_' or self.name[0].isdigit():
+            self.name = 'D%s' % self.name[1:]
 
     @staticmethod
     def _hash_generator(*args):
